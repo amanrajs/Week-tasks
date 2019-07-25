@@ -1,0 +1,170 @@
+#titleandcross{
+  display: flex;
+}
+#titlepopup{
+  width: 80%;
+  font-size: 20px;
+  font-weight: bold;}
+#closePopup{
+  line-height: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: 0.8em;
+  font-family: Arial;
+  text-align: center;
+  margin-left: auto;
+  width: 20px;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: #bf0000;
+}
+
+.popup{
+  padding-left: 50px;
+  display: none;
+  position: fixed;top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -450px;
+  width : 70%;
+  height: 70%;
+  z-index:100;
+  background-color:white;
+  border: solid;
+  border-width: 1px;
+  padding:10px;
+}
+.closeButton{
+}
+img{
+  width: 20%;
+}
+body{
+  margin:0px;
+}
+header{
+  margin: 0px;
+  border-width: 0.1px;
+  background-color:#273854;
+}
+.headerbox{
+display: flex;
+}
+HR{
+  margin: 0px;
+}
+h2{
+  color: white;
+  padding:20px;
+  margin: 0px;
+}
+i{
+  padding:25px;
+  margin: 0px;
+  color:#FFFFFD;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-width: 0.1px;
+    background-color:#273854;
+    color:#FFFFFD;
+}
+main{
+  height: 80%;
+  width: 100%;
+  margin: 0px;
+  border-width: 0.1px;
+}
+.fullcont{
+  display: flex;
+}
+.main-container{
+  width: 100%;
+}
+.left-container{
+   display: flex;
+    width: 75%;
+    height: 100%;
+    flex-direction: column;
+}
+.right-container{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.cols{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 30%;
+}
+#btnsubscribe{
+  background-color: #242424;
+  color:	#FFFFFD;
+}
+.image{
+  width:15%;
+  height:15%;
+}
+card{
+  display: inline-block;
+
+}
+.col-picture{
+  margin-top: 16px;
+  margin-left: 32px;
+  width: 16%;
+}
+.col-content{
+    width: 75%;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: 22px;
+}
+#ddlnewschannel{
+  width: 50%;
+}
+h4,h6,p{
+  padding: 0px;
+  margin: 0px;
+}
+#btn{
+  background-color: #C75D48
+}
+.box{
+  display:flex;
+  height:25%;
+  margin: 10px;
+}
+.description{
+  margin:10px 0px;
+}
+.vertical{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+
+}
+.metadisc{
+  font-style: italic;
+}
+#footertag{
+text-align: center;
+padding :15px
+}
+#email{
+  width:50%;
+}
+.btncontinue{
+  margin-top: auto;
+  width:20%;
+  background-color: #C75D48;
+}
+p{
+  overflow: hidden;
+text-overflow: ellipsis;
+}
