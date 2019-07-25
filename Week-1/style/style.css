@@ -1,0 +1,106 @@
+i{
+  color:#FFFFFD
+  font-size: 20px;
+}
+img{
+  width: 100%;
+}
+#head{
+    margin-left: 16px;
+    padding-top: 16px;
+    color:#FFFFFD;"
+}
+#{
+margin-left: 16px;
+color:#FFFFFD;
+font-size: 0.7em;
+}
+body{
+  margin:0px;
+  height:100%
+}
+header{
+  padding-bottom:  10px;
+  border-width: 0.1px;
+  background-color:#273854;
+}
+.rightcols{
+  margin-top:16px
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-width: 0.1px;
+    background-color:#273854;
+    color:#FFFFFD;
+}
+main{
+  display: flex;
+  height: 80%;
+  margin: 0px;
+  border-width: 0.1px;
+
+}
+.left-container{
+    width: 75%;
+    height: 100%;
+}
+.right-container{
+  width: 25%;
+}
+.cols{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 30%;
+}
+#btnsubscribe{
+  background-color: #242424;
+  color:	#FFFFFD;
+}
+.col-picture{
+  margin-top: 16px;
+  margin-left: 32px;
+  width: 16%;
+}
+
+/* h5{
+margin: 5px;
+} */
+.col-content{
+    width: 75%;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: 22px;
+}
+#ddlnewschannel{
+  width: 50%;
+}
+h4{
+  padding: 0px;
+  margin: 0px;
+  margin-bottom:2px;
+}
+h6{
+  padding: 0px;
+  margin: 0px;
+margin-bottom:5px;
+}
+
+p{
+  padding: 0px;
+  margin: 0px;
+margin-bottom:5px;
+}
+
+#foot{
+  margin:10px;
+  text-align:center;
+}
+#btn{
+  background-color: #C75D48;
+  margin-bottom:5px
+
+}
