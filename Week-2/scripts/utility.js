@@ -1,36 +1,36 @@
 function emailSave(){
-  let regexEmail = /\S+@\S+\.\S+/;
   let emailid= document.getElementById('email').value;
   if(regexEmail.test(emailid)){
     window.localStorage.setItem(emailid, JSON.stringify(emailid));
-    alert("Subscribed successfully");
+    alert(emailSubscribedMessage);
   }
   else{
-    alert("Invalid Emailid");
+    alert(emailInvalidMessage);
   }
 }
-function clicked(){
+function clicked(clickEvent,fullContainer,popup){
   return clickEvent => {
-    if(/^\d+$/.test(clickEvent.srcElement.id)){
-      popup.style.display = 'block';
-      popup.innerHTML = '';
+    if(checkButtonClickRegex.test(clickEvent.srcElement.id)){
       let textArea = document.createElement('div'),
       horizontaLine = document.createElement('hr'),
-      titlepopup = document.createElement('div'),
+      titlePopup = document.createElement('div'),
       closePopup = document.createElement('div'),
-      descriptionpopup = document.createElement('div');
-      descriptionpopup.textContent = obj[Number(clickEvent.srcElement.id)].postDesc;
-      titlepopup.textContent = obj[Number(clickEvent.srcElement.id)].postTitle;
-      titlepopup.appendChild(horizontaLine);
-      closePopup.textContent = '\u2A2f';
-      textArea.appendChild(titlepopup);
+      descriptionPopup = document.createElement('div');
+      
+      popup.style.display = 'block';
+      popup.innerHTML = '';
+      descriptionPopup.textContent = article_data[Number(clickEvent.srcElement.id)].postDesc;
+      titlePopup.textContent = article_data[Number(clickEvent.srcElement.id)].postTitle;
+      titlePopup.appendChild(horizontaLine);
+      closePopup.textContent = closePopupText;
+      textArea.appendChild(titlePopup);
       textArea.appendChild(closePopup);
       textArea.setAttribute('id','titleandcross');
-      titlepopup.setAttribute('id','titlepopup');
-      descriptionpopup.setAttribute('id','descriptionpopup');
+      titlePopup.setAttribute('id','titlepopup');
+      descriptionPopup.setAttribute('id','descriptionpopup');
       closePopup.setAttribute('id','closePopup');
       popup.appendChild(textArea);
-      popup.appendChild(descriptionpopup);
+      popup.appendChild(descriptionPopup);
       fullContainer.style.opacity = '0.3';
     }
     else if(clickEvent.srcElement.id === 'closePopup'){

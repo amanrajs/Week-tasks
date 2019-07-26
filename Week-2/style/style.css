@@ -18,11 +18,10 @@
   border-radius: 100%;
   background-color: #bf0000;
 }
-
 .popup{
-  padding-left: 50px;
   display: none;
-  position: fixed;top: 50%;
+  position: fixed;
+  top: 50%;
   left: 50%;
   margin-top: -250px;
   margin-left: -450px;
@@ -50,6 +49,9 @@ header{
 .headerbox{
 display: flex;
 }
+#ddlSelect{
+  width:50%;
+}
 HR{
   margin: 0px;
 }
@@ -68,8 +70,8 @@ footer{
   bottom: 0;
   width: 100%;
   border-width: 0.1px;
-    background-color:#273854;
-    color:#FFFFFD;
+  background-color:#273854;
+  color:#FFFFFD;
 }
 main{
   height: 80%;
@@ -84,10 +86,10 @@ main{
   width: 100%;
 }
 .left-container{
-   display: flex;
-    width: 75%;
-    height: 100%;
-    flex-direction: column;
+  display: flex;
+  width: 75%;
+  height: 100%;
+  flex-direction: column;
 }
 .right-container{
   margin: 10px;
@@ -111,7 +113,6 @@ main{
 }
 card{
   display: inline-block;
-
 }
 .col-picture{
   margin-top: 16px;
@@ -147,7 +148,6 @@ h4,h6,p{
   display: flex;
   flex-direction: column;
   padding-left: 15px;
-
 }
 .metadisc{
   font-style: italic;
@@ -166,5 +166,5 @@ padding :15px
 }
 p{
   overflow: hidden;
-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
