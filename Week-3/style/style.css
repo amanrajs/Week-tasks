@@ -6,17 +6,17 @@
   font-size: 20px;
   font-weight: bold;}
 #closePopup{
-  line-height: 20px;
+  line-height: 10px;
   font-weight: bold;
-  color: white;
-  font-size: 0.8em;
+  color: red;
+  font-size: 1.5em;
   font-family: Arial;
   text-align: center;
   margin-left: auto;
   width: 20px;
   cursor: pointer;
   border-radius: 100%;
-  background-color: #bf0000;
+  background-color: white;
 }
 .popup{
   display: none;

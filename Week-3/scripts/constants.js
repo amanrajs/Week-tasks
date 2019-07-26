@@ -1,0 +1,17 @@
+const defaultContent='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+const defaultDescription='created at 21 July 2019""created at 21 July 2019';
+const defaultTitle='SAMPLE NEWS HEADING';
+const buttonText='Continue Reading';
+const checkButtonClickRegex=/^\d+$/;
+const regexEmail = /\S+@\S+\.\S+/;
+const emailSubscribedMessage='Subscribed Successfully';
+const emailInvalidMessage='Invalid Email id';
+const closePopupText='X';
+const imageSource='resource/download.png';
+const selectCategoryText='Select Category';
+const subscribeText='Subscribe';
+const headerTagText='NEWSFEED';
+const headerTagSubText='yet Another Newsfeed';
+const footerText = ' \u00A9 NewsFeed 2019 ';
+const defaultSelectChannelText='Select a NEWS Channel';
+const subscribeTxt="Subscribe";
