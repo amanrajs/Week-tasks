@@ -100,7 +100,6 @@ function addDivToContainer(card,container,fullContainer){
   let horizontalline = document.createElement('HR');
   container.appendChild(card);
   container.appendChild(horizontalline);
-  console.log(fullContainer);
   if(fullContainer){
     fullContainer.appendChild(container);
   }
