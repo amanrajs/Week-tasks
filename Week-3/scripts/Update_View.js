@@ -40,7 +40,7 @@ rightContainer.appendChild(select);
 fullContainer.appendChild(rightContainer);
 select.onchange = () => {
   let val=select.value;
-  select.options.add( new Option(defaultSelectChannelText,null) );
+  select.options[0].disabled = true;
   changeContent(val,fullContainer,container);
 }
 }
