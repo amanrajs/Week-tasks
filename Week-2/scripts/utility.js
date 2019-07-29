@@ -3,8 +3,7 @@ function emailSave(){
   if(regexEmail.test(emailid)){
     window.localStorage.setItem(emailid, JSON.stringify(emailid));
     alert(emailSubscribedMessage);
-  }
-  else{
+  } else{
     alert(emailInvalidMessage);
   }
 }
@@ -16,7 +15,7 @@ function clicked(clickEvent,fullContainer,popup){
       titlePopup = document.createElement('div'),
       closePopup = document.createElement('div'),
       descriptionPopup = document.createElement('div');
-      
+
       popup.style.display = 'block';
       popup.innerHTML = '';
       descriptionPopup.textContent = article_data[Number(clickEvent.srcElement.id)].postDesc;
@@ -32,8 +31,7 @@ function clicked(clickEvent,fullContainer,popup){
       popup.appendChild(textArea);
       popup.appendChild(descriptionPopup);
       fullContainer.style.opacity = '0.3';
-    }
-    else if(clickEvent.srcElement.id === 'closePopup'){
+    } else if(clickEvent.srcElement.id === 'closePopup'){
       popup.style.display = 'none';
       fullContainer.style.opacity = '1';
     }
