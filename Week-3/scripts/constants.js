@@ -14,5 +14,6 @@ headerTagText='NEWSFEED',
 headerTagSubText='yet Another Newsfeed',
 footerText = ' \u00A9 NewsFeed 2019 ',
 defaultSelectChannelText='Select a NEWS Channel',
-subscribeTxt="Subscribe",
-url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=ac1fd7a9fc1342abb913e554a9525d85&pageSize=15`;
+subscribeTxt='Subscribe',
+url = `https://newsapi.org/v1/articles?apiKey=ac1fd7a9fc1342abb913e554a9525d85&`,
+newsChannel=['ign','fortune','the-times-of-india','al-jazeera-english','the-hindu','bbc-news','the-verge','business-insider','cnn','reuters'];

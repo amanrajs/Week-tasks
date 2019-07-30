@@ -40,6 +40,7 @@ function init(){
   foot.appendChild(footerTag);
   app.prepend(appBody);
   appBody.append(fullContainer);
-  setLeftContent(fullContainer,container);
+  fullContainer.appendChild(container);
+  setRightContent(fullContainer,container);
   document.addEventListener('click', clicked(this,fullContainer,popup));
 }

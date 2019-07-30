@@ -1,11 +1,9 @@
-function setLeftContent(fullContainer,container){
-fetch(url)
+function setLeftContent(fullContainer,container,newsUrl){
+fetch(newsUrl)
 .then((resp) => resp.json())
 .then(function(data) {
   fullContainer.data=data;
-  fullContent(data,container);
-  fullContainer.appendChild(container);
-  setRightContent(data,fullContainer,container);
+  changeContent(container,fullContainer);
 })
 .catch(function(error) {
 });
