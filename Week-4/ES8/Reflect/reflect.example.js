@@ -36,8 +36,8 @@ const handler1 = {
             //console.log(Reflect.get(target, prop, receiver))
             // arguments[0][prop]
             return Reflect.get(...arguments);
-            //fast and easy way, the win with reflect here is very explicit 
-            //and we are accessing something inside a variable 
+            //fast and easy way, the win with reflect here is very explicit
+            //and we are accessing something inside a variable
         }
     }
 };
@@ -66,11 +66,9 @@ function sum(...array) {
         return number + total;
     })
 }
-
 // sum.apply = function(){
 //     throw new Error('I broke apply function!');
 // }
-
 console.log(sum[1,2,3]);
 console.log(sum.apply(null, [1,2,3]));
 console.log(Function.apply.call(sum, null, [1,2,3]));

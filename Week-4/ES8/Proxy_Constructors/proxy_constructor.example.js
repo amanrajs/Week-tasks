@@ -30,7 +30,7 @@
 
 let handler = {
     // this has all the above properties to trap
-    // get trap // takes 2 args - target object and the property asked for 
+    // get trap // takes 2 args - target object and the property asked for
     get: (target, propName) => {
         // console.log(target, propName);
         //return undefined;
@@ -61,7 +61,7 @@ console.log(newObj);
 // }
 
 // restrict user to set non-numeric values for age
-// check if the property is existed in object 
+// check if the property is existed in object
 
 
 // ---------- another example
@@ -90,14 +90,15 @@ console.log(newObj);
 // --------------------- another example ---------------
 
 function sum (x,y){
+  console.log("sum");
     return x+y;
 }
 
 let handler2 = {
     //apply trap takes 3 args - target, the this, argumentlist
     apply: (target, thisArg, argsList) => {
-        console.log("someone called this function");
-        // return target(argsList[0], argsList[1]) * 100
+        console.log(argsList);
+       return target(argsList[0], argsList[1]) * 100
     }
 }
 
