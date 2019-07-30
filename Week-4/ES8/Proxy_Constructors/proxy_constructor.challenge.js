@@ -65,7 +65,7 @@ let handlerTwo = {
           return target[propName];
         }
     },
-    
+
     set: (target, propName, newVal) => {
         target[propName] = newVal;
     }
