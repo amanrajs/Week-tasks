@@ -35,7 +35,6 @@ class Human extends superhero {
         this._healthpoints = healthpoints;
         this.city=city;
         this.state=state;
-
     }
     newName() {
          this._name=`Mr ${this._name}`;
@@ -48,8 +47,7 @@ class Human extends superhero {
      }
 }
 function newName() {
-     this._name=`Mr ${this._name}`;
-
+   this._name=`Mr ${this._name}`;
  }
 const details = [20,"unnao","uttar pradesh","Bill", 10, 8];
 const hero3 = new Human(...details);
@@ -57,9 +55,6 @@ console.log(hero3);
 hero3.newName();
 hero3.powerHalf();
 console.log(hero3);
-
-
-
 // hero3.name = "sai";
 // console.log(hero3)
 // const hero4 = new superhero(20, "abc", 8);

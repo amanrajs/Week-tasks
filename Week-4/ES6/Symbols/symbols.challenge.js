@@ -32,7 +32,6 @@ console.log(myCar);
 myCar.color = `black`;
 myCar.make = `Jaguar`;
 myCar.model = `Land Rover`;
-
 console.log(myCar);
 
 // implement the functionality to set and get values to car color - Black, car model - Land Rover and car maker - Jaguar

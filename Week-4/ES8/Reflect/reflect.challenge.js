@@ -1,5 +1,4 @@
-let course = {
-};
+let course = {};
 Reflect.defineProperty(course, 'name', {value: 'Javascript',writable: false})
 Reflect.defineProperty(course, 'duration', {value: '3 hours',writable: false})
 
