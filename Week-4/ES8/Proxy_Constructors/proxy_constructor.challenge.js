@@ -12,24 +12,22 @@ let manager = {
     employees: 0
 }
 let handler = {
-  get: (target, propName) => {
-      return target[propName];
-  },
-  set: (target, propName, newVal) => {
-      if(propName==='employees'){
-        if(newVal.isArray|| typeof newVal === 'string' || newVal instanceof String || newVal== null){
-          target[propName] = newVal;
+    get: (target, propName) => {
+        return target[propName];
+    },
+    set: (target, propName, newVal) => {
+        if(propName==='employees'){
+          if(newVal.isArray|| typeof newVal === 'string' || newVal instanceof String || newVal== null){
+            target[propName] = newVal;
+          } else{
+            console.log("its not allowed to have manager with value other than array,string or null");
+          }
         } else{
-          console.log("its not allowed to have manager with value other than array,string or null");
+          target[propName] = newVal;
         }
-      } else{
-        target[propName] = newVal;
-      }
-  }
+    }
 }
 let newObj = new Proxy(manager, handler);
-
-
 manager.office = `London` //updates
 manager.employees = ['Jim', 'Patrick', 'Mary']; //updates
 manager.employees = 3; // doesn't update
@@ -39,7 +37,7 @@ manager.employees = {name:'Jim'} // doesn't update
 // 2. GET
 // adjust the following code so that anytime an internal object with accessLevel of 1 is accessed,
 //"Access Denied" is returned.
-
+const obj={username:'Access denied' ,accessCode:'Access denied' ,accessLevel:'Access denied' };
 const user = [
     {
         username: `bob`,
@@ -57,18 +55,19 @@ const user = [
         accessCode: 9999
     }
 ]
-let handlerTwo = {
-  get: (target, propName) => {
-    if(target[propName].accessLevel===1){
-      return "ACCESS DENIED";
-    } else{
-        return target[propName];
-      }
-  },
 
-  set: (target, propName, newVal) => {
-      target[propName] = newVal;
-  }
+let handlerTwo = {
+    get: (target, propName) => {
+      if(target[propName].accessLevel!==1){
+          return target[propName];
+      } else{
+         return obj;
+        }
+    },
+
+    set: (target, propName, newVal) => {
+        target[propName] = newVal;
+    }
 }
 users = new Proxy(user, handlerTwo);
 console.log(users[0].username)  // Access Denied
