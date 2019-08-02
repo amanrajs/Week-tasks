@@ -12,12 +12,26 @@ let whereClauses = [
     `uid = ${2+1}`,
     `OR city = ${city}`
 ]
+function checkQuery(identifiers,...variables) {
+    let finalQuery = "";
+    const queryType = variables[0].split(" ")[0];
+    const table = variables[1];
+    if(queryType == "UPDATE" && table == "PASSWORDS"){
+      console.log("You can not change password table");
+      return finalQuery;
+    }
+    if(queryType == 'UPDATE' || queryType == 'SELECT'){
 
+
+      finalQuery = (order) ? (`${variables[0]} FROM ${table} WHERE ${variables[2][0]} ${variables[2][1]} ORDER BY city`) : (`${variables[0]} FROM ${table} WHERE ${variables[2][0]} ${variables[2][1]} ORDER BY city asc`);
+      return finalQuery;
+    }else{
+      console.log("only update and select query can be processed");
+      return finalQuery;
+    }
+}
+var query = checkQuery `${command} FROM ${table} WHERE ${whereClauses} ${order}`;
+console.log(query);
 // Your code to call the tag and log the return value here...
 // your output should be - SELECT * FROM USERS WHERE uid = 3 OR city = chicago ORDER BY asc
 // Spread syntax is a more common and easy here if you are comfortable with it
-function checkQuery() {
-    //Your validation code here...
-
-    return (finalQuery);
-}

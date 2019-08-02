@@ -1,20 +1,20 @@
 let course = {
-  trainer:'nagasai'
+
 };
+course.trainer='nagasai'
 if(Reflect.defineProperty(course, 'name', {value: 'Javascript',writable: false})){
   console.log('property created!');
 } else{
   console.log('property not created!');
 }
 if(Reflect.defineProperty(course, 'duration', {value: '3 hours',writable: false})){
-console.log('property created!');
+console.log('property duration created!');
 }else{
-  console.log('property not created!');
+  console.log('property duration not created!');
 }
-Reflect.deleteProperty(course, 'trainer')
-if(Reflect.deleteProperty(course, 'duration'))
-console.log('property deleted!');
-
+console.log(course);
+Reflect.deleteProperty(course, 'trainer');
+console.log(course);
 console.log(Reflect.getOwnPropertyDescriptor(course, 'duration').value);
 console.log(Reflect.getOwnPropertyDescriptor(course, 'name').value);
 
