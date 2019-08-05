@@ -1,0 +1,178 @@
+#titleandcross{
+  display: flex;
+}
+#titlepopup{
+  width: 80%;
+  font-size: 20px;
+  font-weight: bold;}
+#closePopup{
+  line-height: 10px;
+  font-weight: bold;
+  color: red;
+  font-size: 1.5em;
+  font-family: Arial;
+  text-align: center;
+  margin-left: auto;
+  width: 20px;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: white;
+}
+.popup{
+  display: none;
+  position: fixed;top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -450px;
+  width : 70%;
+  height: 70%;
+  z-index:100;
+  background-color:white;
+  border: solid;
+  border-width: 1px;
+  overflow-y: scroll;
+  padding:10px;
+}
+img{
+  width: 20%;
+}
+body{
+  margin:0px;
+}
+header{
+  position: fixed;
+  top: 0;
+  width:100%;
+  margin: 0px;
+  border-width: 0.1px;
+  background-color:#273854;
+}
+.headerbox{
+display: flex;
+}
+HR{
+  margin: 0px;
+}
+h2{
+  color: white;
+  padding:20px;
+  margin: 0px;
+}
+i{
+  padding:25px;
+  margin: 0px;
+  color:#FFFFFD;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-width: 0.1px;
+  background-color:#273854;
+  color:#FFFFFD;
+}
+main{
+  height: 80%;
+  width: 100%;
+  margin: 0px;
+  border-width: 0.1px;
+
+}
+.fullcont{
+  display: flex;
+}
+.main-container{
+  padding-top: 68px;
+  width: 100%;
+}
+.left-container{
+   display: flex;
+   width: 80%;
+   height: 100%;
+   flex-direction: column;
+}
+.check{
+  margin-left: auto;
+  padding-top:20px;
+}
+.right-container{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.cols{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 30%;
+}
+#btnsubscribe{
+  background-color: #242424;
+  color:	#FFFFFD;
+}
+.image{
+  width:20%;
+  height:20%;
+}
+card{
+  display: inline-block;
+}
+.col-picture{
+  margin-top: 16px;
+  margin-left: 32px;
+  width: 16%;
+}
+.col-content{
+    width: 75%;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: 22px;
+}
+#ddlnewschannel{
+  width: 70%;
+}
+#btn-email{
+  color:#FFFFFD;
+  background-color: #242424;
+}
+h4,h6,p{
+  padding: 0px;
+  margin: 0px;
+}
+#btn{
+  background-color: #C75D48
+}
+.box{
+  display:flex;
+  height:25%;
+  margin: 10px;
+}
+.description{
+  margin:10px 0px;
+}
+.vertical{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+.metadisc{
+  font-style: italic;
+}
+#footertag{
+ text-align: center;
+ padding :15px
+}
+#email{
+  width:60%;
+}
+.btncontinue{
+  margin-top: auto;
+  width:150px;
+  background-color: #C75D48;
+}
+p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
