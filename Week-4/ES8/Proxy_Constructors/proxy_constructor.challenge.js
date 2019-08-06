@@ -12,20 +12,20 @@ let manager = {
     employees: 0
 }
 let handler = {
-    get: (target, propName) => {
-        return target[propName];
-    },
-    set: (target, propName, newVal) => {
-        if(propName==='employees'){
-          if(newVal.isArray|| typeof newVal === 'string' || newVal instanceof String || newVal== null){
-            target[propName] = newVal;
-          } else{
-            console.log("its not allowed to have manager with value other than array,string or null");
-          }
-        } else{
+  get: (target, propName) => {
+      return target[propName];
+  },
+  set: (target, propName, newVal) => {
+      if(propName==='employees'){
+        if(newVal.isArray|| typeof newVal === 'string' || newVal instanceof String || newVal== null){
           target[propName] = newVal;
+        } else{
+          console.log("its not allowed to have manager with value other than array,string or null");
         }
-    }
+      } else{
+        target[propName] = newVal;
+      }
+  }
 }
 let newObj = new Proxy(manager, handler);
 manager.office = `London` //updates
@@ -57,17 +57,17 @@ const user = [
 ]
 
 let handlerTwo = {
-    get: (target, propName) => {
-      if(target[propName].accessLevel!==1){
-          return target[propName];
-      } else{
-         return obj;
-        }
-    },
+  get: (target, propName) => {
+    if(target[propName].accessLevel!==1){
+        return target[propName];
+    } else{
+       return obj;
+      }
+  },
 
-    set: (target, propName, newVal) => {
-        target[propName] = newVal;
-    }
+  set: (target, propName, newVal) => {
+      target[propName] = newVal;
+  }
 }
 users = new Proxy(user, handlerTwo);
 console.log(users[0].username)  // Access Denied

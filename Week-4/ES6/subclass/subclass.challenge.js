@@ -30,21 +30,21 @@ class superhero {
 }
 
 class Human extends superhero {
-    constructor(healthpoints,city,state,...superherostuff) {
-        super(...superherostuff);
-        this._healthpoints = healthpoints;
-        this.city=city;
-        this.state=state;
-    }
-    newName() {
-         this._name=`Mr ${this._name}`;
-     }
-     powerHalf() {
-         this._strength /= 2;
-     }
-     powerDouble() {
-         this._strength *= 2;
-     }
+  constructor(healthpoints,city,state,...superherostuff) {
+    super(...superherostuff);
+    this._healthpoints = healthpoints;
+    this.city=city;
+    this.state=state;
+  }
+  newName() {
+     this._name=`Mr ${this._name}`;
+   }
+   powerHalf() {
+     this._strength /= 2;
+   }
+   powerDouble() {
+     this._strength *= 2;
+   }
 }
 function newName() {
    this._name=`Mr ${this._name}`;

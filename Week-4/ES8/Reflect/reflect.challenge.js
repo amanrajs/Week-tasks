@@ -1,6 +1,4 @@
-let course = {
-
-};
+let course = {};
 course.trainer='nagasai'
 if(Reflect.defineProperty(course, 'name', {value: 'Javascript',writable: false})){
   console.log('property created!');

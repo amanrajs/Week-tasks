@@ -6,8 +6,7 @@ const users=['aman','vijay','bharath','gagan'];
 function registeredMember(name){
   if(users.indexOf(name) !=-1){
   discount=5;
-  }
-  else{
+  } else{
     discount=4;
   }
   return `discount is ${discount}%`

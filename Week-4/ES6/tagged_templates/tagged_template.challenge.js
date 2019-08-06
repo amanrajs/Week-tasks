@@ -13,22 +13,20 @@ let whereClauses = [
     `OR city = ${city}`
 ]
 function checkQuery(identifiers,...variables) {
-    let finalQuery = "";
-    const queryType = variables[0].split(" ")[0];
-    const table = variables[1];
-    if(queryType == "UPDATE" && table == "PASSWORDS"){
-      console.log("You can not change password table");
-      return finalQuery;
-    }
-    if(queryType == 'UPDATE' || queryType == 'SELECT'){
-
-
-      finalQuery = (order) ? (`${variables[0]} FROM ${table} WHERE ${variables[2][0]} ${variables[2][1]} ORDER BY city`) : (`${variables[0]} FROM ${table} WHERE ${variables[2][0]} ${variables[2][1]} ORDER BY city asc`);
-      return finalQuery;
-    }else{
-      console.log("only update and select query can be processed");
-      return finalQuery;
-    }
+  let finalQuery = "";
+  const queryType = variables[0].split(" ")[0];
+  const table = variables[1];
+  if(queryType == "UPDATE" && table == "PASSWORDS"){
+    console.log("You can not change password table");
+    return finalQuery;
+  }
+  if(queryType == 'UPDATE' || queryType == 'SELECT'){
+    finalQuery = (order) ? (`${variables[0]} FROM ${table} WHERE ${variables[2][0]} ${variables[2][1]} ORDER BY city`) : (`${variables[0]} FROM ${table} WHERE ${variables[2][0]} ${variables[2][1]} ORDER BY city asc`);
+    return finalQuery;
+  } else{
+    console.log("only update and select query can be processed");
+    return finalQuery;
+  }
 }
 var query = checkQuery `${command} FROM ${table} WHERE ${whereClauses} ${order}`;
 console.log(query);

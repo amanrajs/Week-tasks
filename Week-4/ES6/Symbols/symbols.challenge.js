@@ -3,29 +3,29 @@ const CARMAKE = Symbol();
 const CARMODEL = Symbol();
 
 class Car {
-    constructor(color, make, model) {
-        this[CARCOLOR] = color;
-        this[CARMAKE] = make;
-        this[CARMODEL] = model;
-    }
-    set color(color){
+  constructor(color, make, model) {
       this[CARCOLOR] = color;
-    }
-    set model(model){
-      this[CARMODEL] = model;
-    }
-    set make(make){
       this[CARMAKE] = make;
-    }
-    get color() {
-      return this[CARCOLOR];
-    }
-    get model() {
-        return this[CARMODEL];
-    }
-    get make() {
-      return this[CARMAKE];
-    }
+      this[CARMODEL] = model;
+  }
+  set color(color){
+    this[CARCOLOR] = color;
+  }
+  set model(model){
+    this[CARMODEL] = model;
+  }
+  set make(make){
+    this[CARMAKE] = make;
+  }
+  get color() {
+    return this[CARCOLOR];
+  }
+  get model() {
+      return this[CARMODEL];
+  }
+  get make() {
+    return this[CARMAKE];
+  }
 }
 let myCar = new Car('Red', 'Porsche', 'Cayanne');
 console.log(myCar);
