@@ -1,0 +1,59 @@
+<div class="container-fluid" id='form'>
+  <h2>Create News</h2>
+
+  <form [formGroup]="createNewsForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Heading</label>
+      <input type="text" [class.is-invalid]="newsHeading.invalid && newsHeading.touched" formControlName="newsHeading"
+        class="form-control">
+      <div *ngIf="newsHeading.invalid && newsHeading.touched">
+        <small class="text-danger" *ngIf="newsHeading.errors?.required">Heading is required</small>
+        <small class="text-danger" *ngIf="newsHeading.errors?.minlength">Heading must be at least 3 characters</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Short Description</label>
+      <input type="text" [class.is-invalid]="description.invalid && description.touched" formControlName="description"
+        class="form-control">
+      <div *ngIf="description.invalid && description.touched">
+        <small class="text-danger" *ngIf="description.errors?.required">description is required</small>
+        <small class="text-danger" *ngIf="description.errors?.minlength">description must be at least 3
+          characters</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Content</label>
+      <textarea rows="4" cols="50" [class.is-invalid]="newsContent.invalid && newsContent.touched"
+        formControlName="newsContent" class="form-control"></textarea>
+      <div *ngIf="newsContent.invalid && newsContent.touched">
+        <small class="text-danger" *ngIf="newsContent.errors?.required">newsContent is required</small>
+        <small class="text-danger" *ngIf="newsContent.errors?.minlength">newsContent must be at least 10
+          characters</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" [class.is-invalid]="date.invalid && date.touched" formControlName="date" id="dp"
+        class="form-control">
+      <div *ngIf="date.invalid && date.touched">
+        <small class="text-danger" *ngIf="date.errors?.required">date is required</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Author</label>
+      <input type="text" formControlName="author" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Source URL</label>
+      <input type="text" formControlName="newsUrl" class="form-control">
+    </div>
+
+    <button class="btn btn-primary" [disabled]="!createNewsForm.valid" type="submit">Save</button>
+    <button class="btn btn-primary" type="button" (click)="resetForm()">Cancel</button>
+  </form>
+</div>

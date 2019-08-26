@@ -1,0 +1,19 @@
+<h2 [className]=''heading''>{{selectedLevel}}</h2>
+<div [className]=''filterOptions''>
+  <select [(ngModel)]='selectedLevel'>
+    <option *ngFor='let level of articlesSource ;index as i' [ngValue]='level'>{{level}}</option>
+  </select>
+  <div>
+    <input type='text' placeholder='...Type your text ' value='' #filter>
+    <button type='submit' (click)='filterArticles(filter.value)' id='btnFilter'> Filter</button>
+  </div>
+  <button (click)='addArticle()' type='button'> Add Article</button>
+</div>
+<div>
+  <div *ngFor='let newsa of articles'>
+    <div *ngIf='newsa.postCategory==selectedLevel || selectedLevel=='All channels' '>
+      <app-short-article [news]='newsa'>
+      </app-short-article>
+    </div>
+  </div>
+</div>

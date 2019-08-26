@@ -1,0 +1,28 @@
+.container {
+  width: 80%;
+  height: 25%;
+  border: 2px solid #333;
+}
+.shortArticle {
+  display: flex;
+  justify-content: flex-start;
+}
+.date {
+  margin-left: auto;
+}
+#btnReadMore {
+  margin-top: 25%;
+}
+.shortArticleSubRightColumn {
+  flex-direction: column;
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 60%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: block;
+}
