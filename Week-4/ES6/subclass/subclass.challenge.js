@@ -18,12 +18,18 @@ class superhero {
         this.strength += 5;
     }
     get name() {
-        console.log("get name");
         return this._name;
+    }
+    get strength() {
+        return this._strength;
+    }
+    get speed() {
+        return this._speed;
     }
     set name(newname) {
         this._name = newname;
     }
+
     static goodHero() {
         return true;
     }
@@ -33,8 +39,8 @@ class Human extends superhero {
   constructor(healthpoints,city,state,...superherostuff) {
     super(...superherostuff);
     this._healthpoints=healthpoints;
-    this._city=city;
-    this._state=state;
+    this._city = city;
+    this._state = state;
   }
   get healthpoints() {
       console.log("get healthh");
@@ -43,40 +49,25 @@ class Human extends superhero {
   set healthpoints(healthpoints) {
       this._healthpoints = healthpoints;
   }
-  get city() {
-      console.log("get city");
-      return this.city;
-  }
-  set city(city) {
-      this.city=city;
-  }
-  get state() {
-      console.log("get sate");
-      return this._state;
-  }
-  set state(state) {
-      this._state = state;
-  }
-  newName() {
-     this._name=`Mr ${this._name}`;
+  get name() {
+    return `Mr ${this._name}` ;
    }
-   powerHalf() {
-     this._strength /= 2;
+   set name(newname){s
+    this._name=newname
    }
-   powerDouble() {
-     this._strength *= 2;
-   }
+
+   editName = () => {
+    this._name = `Mr ${this._name}`;
 }
-function newName() {
-   this._name=`Mr ${this._name}`;
- }
+powerUp = () =>{
+    this._strength += 2; 
+}
+speedDown = () => {
+    this._speed /= 2;
+}
+}
 const details = [20,"unnao","uttar pradesh","Bill", 10, 8];
-const hero3 = new Human(...details);
-console.log(hero3);
-hero3.newName();
-hero3.powerHalf();
+var hero3 = new Human(...details);
 console.log(hero3.name);
-// hero3.name = "sai";
-// console.log(hero3)
-// const hero4 = new superhero(20, "abc", 8);
-// console.log(hero4);
+hero3.name='abcd';
+console.log(hero3.name)
