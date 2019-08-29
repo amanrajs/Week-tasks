@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "build-server": "webpack --mode production --config webpack_prod.config.js",
+    "server-prod": "webpack-dev-server --open --mode production --config webpack_prod.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +28,8 @@
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
     "es6-promise": "^4.2.8",
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "strip-loader": "^0.1.2",
+    "uglifyjs-webpack-plugin": "^2.2.0"
   }
 }

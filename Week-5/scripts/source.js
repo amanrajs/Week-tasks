@@ -9,6 +9,7 @@ require('babel-polyfill');
 
 window.onload = init;
 function init() {
+  console.log("jgjkdsfdfdfdf");
   let fullContainer = document.createElement('div'),
     container = document.createElement('div'),
     popup = document.createElement('div'),
