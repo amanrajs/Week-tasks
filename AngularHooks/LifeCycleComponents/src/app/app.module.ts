@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ChildComponent } from './child/child.component';
+import { TimeComponent } from './time/time.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChildComponent,
+    TimeComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

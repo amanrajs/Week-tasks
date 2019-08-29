@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularTask2": {
+    "LifeCycleComponents": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularTask2",
+            "outputPath": "dist/LifeCycleComponents",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularTask2:build"
+            "browserTarget": "LifeCycleComponents:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularTask2:build:production"
+              "browserTarget": "LifeCycleComponents:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularTask2:build"
+            "browserTarget": "LifeCycleComponents:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AngularTask2:serve"
+            "devServerTarget": "LifeCycleComponents:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AngularTask2:serve:production"
+              "devServerTarget": "LifeCycleComponents:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "AngularTask2"
+  "defaultProject": "LifeCycleComponents"
 }
