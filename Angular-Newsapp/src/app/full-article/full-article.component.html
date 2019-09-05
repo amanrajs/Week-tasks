@@ -4,10 +4,11 @@
             <img [className]="'image'" src="../../assets/img/download.png" alt="newsimage">
         </div>
         <div [className]="'shortArticleSubRightColumn'">
-            <h4>{{newsHeading}}</h4>
-            <p>{{newsContent}}</p>
+            <h4>{{heading}}</h4>
+            <p>{{content}}</p>
             <h4 [className]="'date'">{{date}}</h4>
-            <h5>{{author}}</h5>
+            <button id=btnClose (click)="btnClose(
+            )">Go back</button>
         </div>
     </div>
 </div>

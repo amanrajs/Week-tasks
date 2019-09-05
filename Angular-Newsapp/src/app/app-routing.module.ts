@@ -8,11 +8,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
-  {path:'',component:LoginPageComponent},
-  {path:'home',component:BrowseNewsComponent,canActivate: [AuthGuardService] },
-  {path:'create',component:CreateNewsComponent,canActivate: [AuthGuardService] },
-  {path:'Articles/:id',component:FullArticleComponent,canActivate: [AuthGuardService] },
-  {path:'**',component:PageNotFoundComponent,canActivate: [AuthGuardService] },
+  { path: '', component: LoginPageComponent },
+  { path: 'home', component: BrowseNewsComponent, canActivate: [AuthGuardService] },
+  { path: 'create', component: CreateNewsComponent, canActivate: [AuthGuardService] },
+  { path: 'Articles/:id', component: FullArticleComponent, canActivate: [AuthGuardService] },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
@@ -20,4 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[CreateNewsComponent,PageNotFoundComponent,FullArticleComponent,LoginPageComponent];
+export const routingComponents = [CreateNewsComponent, PageNotFoundComponent, FullArticleComponent, LoginPageComponent];

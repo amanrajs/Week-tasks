@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { IArticle } from '../Articles';
 import { ChangeDetectorRef } from '@angular/core';
@@ -10,14 +10,11 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class ShortArticleComponent implements OnInit {
   @Input() public news;
+  @Output() public newsData = new EventEmitter<IArticle>();;
   public newsHeading: string;
   newsContent: string;
   date: Date;
-  newsContentModal: string = "";
-  newsHeadingModal: string = "";
-  dateModal: Date;
-  btnId:string;
-  displayData: any;
+  btnId: string;
   constructor(private router: Router, private ref: ChangeDetectorRef) {
   }
   ngOnInit() {
@@ -27,17 +24,6 @@ export class ShortArticleComponent implements OnInit {
     this.btnId = this.news.postId + 'btn';
   }
   readMore(newNews) {
-    this.newsHeadingModal = newNews.postTitle;
-    this.newsContentModal = newNews.postDesc;
-    this.dateModal = newNews.postDate;
-    var modal = document.getElementById(newNews.postId);
-    let btnid = newNews.postId + 'btn';
-    modal.style.display = 'block';
-    var btn = document.getElementById(btnid);
-    this.ref.markForCheck();
-
-    btn.onclick = function () {
-      modal.style.display = 'none';
-    }
+    this.newsData.emit(newNews);
   }
 }

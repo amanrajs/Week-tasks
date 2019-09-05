@@ -6,7 +6,7 @@ import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from
   providedIn: 'root'
 })
 export class AuthGuardService implements CanActivate {
-  constructor(private api:LoginServiceService,private router:Router) { }
+  constructor(private api: LoginServiceService, private router: Router) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (this.api.isValid) {
       return true;
@@ -17,7 +17,8 @@ export class AuthGuardService implements CanActivate {
         }
       });
       return false;
-    }  }
+    }
+  }
 
-  
+
 }

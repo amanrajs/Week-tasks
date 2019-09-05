@@ -6,15 +6,14 @@ import { Subject } from 'rxjs';
 })
 export class LoginServiceService {
   constructor() { }
-  isValid=false;
+  isValid = false;
   public check = new Subject<any>();
 
-  loginCheck(username,password){
-    if(username===AppConstants.email && password===AppConstants.password)
-    {
+  loginCheck(username, password) {
+    if (username === AppConstants.email && password === AppConstants.password) {
       this.check.next(true);
-      this.isValid=true;
+      this.isValid = true;
     };
     return this.isValid;
-}
+  }
 }

@@ -14,6 +14,7 @@ export class BrowseNewsComponent implements OnInit {
   public selectedLevel = AppConstants.all_channel;
   public articles; temp_articles = [];
   article_data: any;
+  public btnText:String='Filter';
   flagFilter = false;
   subscription: Subscription;
   constructor(private router: Router, private newsapi: NewsApiService) {
@@ -21,7 +22,7 @@ export class BrowseNewsComponent implements OnInit {
   ngOnInit() {
     this.newsapi.getArticles().subscribe(
       (data) => {
-      this.articles = data;
+        this.articles = data;
         if (this.newsapi.tempData)
           this.articles.push(this.newsapi.tempData);
         for (let item in data) {
@@ -53,7 +54,7 @@ export class BrowseNewsComponent implements OnInit {
   filterArticles(filter) {
     if (!this.flagFilter) {
       this.temp_articles = this.articles;
-      document.getElementById('btnFilter').innerText = 'Clear Filter';
+      this.btnText= 'Clear Filter';
       document.getElementById('btnFilter').style.color = 'red';
       this.flagFilter = true;
       const Data = [];
@@ -73,4 +74,7 @@ export class BrowseNewsComponent implements OnInit {
     }
   }
 
+  fullNews(news: IArticle) {
+    this.router.navigate(['/Articles', news.postId]);
+  }
 }
