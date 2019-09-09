@@ -5,4 +5,5 @@ export class AppConstants {
     public static get email(): string { return 'aman@epam' };
     public static get password(): string { return 'hello' };
     public static get wrongDetails(): string { return "wrong credentials" };
+    public static get dataUrl(): string { return 'http://localhost:4200/assets/data/newsArticles.json' };
 }

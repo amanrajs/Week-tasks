@@ -14,7 +14,8 @@ export class BrowseNewsComponent implements OnInit {
   public selectedLevel = AppConstants.all_channel;
   public articles; temp_articles = [];
   article_data: any;
-  public btnText:String='Filter';
+  btnStyle = 'black';
+  public btnText: String = 'Filter';
   flagFilter = false;
   subscription: Subscription;
   constructor(private router: Router, private newsapi: NewsApiService) {
@@ -52,10 +53,11 @@ export class BrowseNewsComponent implements OnInit {
     this.router.navigateByUrl('/create');
   }
   filterArticles(filter) {
+    console.log("djfjdff")
     if (!this.flagFilter) {
       this.temp_articles = this.articles;
-      this.btnText= 'Clear Filter';
-      document.getElementById('btnFilter').style.color = 'red';
+      this.btnText = 'Clear Filter';
+      this.btnStyle = "red";
       this.flagFilter = true;
       const Data = [];
       let item = {} as any;
@@ -67,8 +69,8 @@ export class BrowseNewsComponent implements OnInit {
       this.articles = Data;
     }
     else {
-      document.getElementById('btnFilter').innerText = 'Filter';
-      document.getElementById('btnFilter').style.color = 'black';
+      this.btnText = 'Filter';
+      this.btnStyle = 'black';
       this.flagFilter = false;
       this.articles = this.temp_articles;
     }
