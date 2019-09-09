@@ -1,0 +1,17 @@
+<div class="scr">
+    <div [className]="'container'">
+        <div [className]="'shortArticle'">
+            <div>
+                <img [className]="'image'" src="../../assets/img/download.png" alt="newsimage">
+            </div>
+            <div [className]="'shortArticleSubRightColumn'">
+                <h4>{{heading}}</h4>
+                <p>{{content}}</p>
+                <h4 [className]="'date'">{{date}}</h4>
+                <button id=btnClose (click)="btnClose(
+                    )">Go back</button>
+            </div>
+        </div>
+    </div>
+    <app-comments [newsPostId]="postId"></app-comments>
+</div>
