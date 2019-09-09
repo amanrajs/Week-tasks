@@ -17,6 +17,7 @@ export class BrowseNewsComponent implements OnInit {
   article_data: any;
   public btnText: String = 'Filter';
   flagFilter = false;
+  btnStyle = 'black';
   subscription: Subscription;
   isAdmin = false;
   constructor(private router: Router, private newsapi: NewsApiService, private login: LoginServiceService) {
@@ -58,7 +59,7 @@ export class BrowseNewsComponent implements OnInit {
     if (!this.flagFilter) {
       this.temp_articles = this.articles;
       this.btnText = 'Clear Filter';
-      document.getElementById('btnFilter').style.color = 'red';
+      this.btnStyle = "red";
       this.flagFilter = true;
       const Data = [];
       let item = {} as any;
@@ -70,8 +71,8 @@ export class BrowseNewsComponent implements OnInit {
       this.articles = Data;
     }
     else {
-      document.getElementById('btnFilter').innerText = 'Filter';
-      document.getElementById('btnFilter').style.color = 'black';
+      this.btnText = 'Filter';
+      this.btnStyle = 'black';
       this.flagFilter = false;
       this.articles = this.temp_articles;
     }

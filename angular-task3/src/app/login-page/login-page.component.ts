@@ -1,6 +1,7 @@
+import { MessageComponent } from './../message/message.component';
 import { AppConstants } from './../constants';
 import { LoginServiceService } from './../login-service.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, ViewChild, ComponentFactoryResolver } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +12,9 @@ import { Router } from '@angular/router';
 export class LoginPageComponent implements OnInit {
   email: string;
   password: string;
-  constructor(private api: LoginServiceService, private router: Router) { }
+  componentRef: any;
+  @ViewChild('loadComponent', { read: ViewContainerRef, static: false }) entry: ViewContainerRef;
+  constructor(private api: LoginServiceService, private router: Router, private resolver: ComponentFactoryResolver) { }
   ngOnInit() {
     this.email = AppConstants.email;
     this.password = AppConstants.password;
@@ -24,7 +27,13 @@ export class LoginPageComponent implements OnInit {
       this.router.navigateByUrl('/home');
     }
     else {
-      alert(AppConstants.wrongDetails);
+      this.createComponent();
     }
+  }
+  createComponent() {
+    // this.entry.clear();
+    const factory = this.resolver.resolveComponentFactory(MessageComponent);
+    this.componentRef = this.entry.createComponent(factory);
+    this.componentRef.instance.message = "Called by appComponent";
   }
 }

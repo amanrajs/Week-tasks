@@ -15,6 +15,7 @@ import { BrowseNewsComponent } from './browse-news/browse-news.component';
 import { FullArticleComponent } from './full-article/full-article.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { CommentsComponent } from './comments/comments.component';
+import { MessageComponent } from './message/message.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { CommentsComponent } from './comments/comments.component';
     BrowseNewsComponent,
     FullArticleComponent,
     LoginPageComponent,
-    CommentsComponent
+    CommentsComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,8 @@ import { CommentsComponent } from './comments/comments.component';
     ReactiveFormsModule,
   ],
   providers: [NewsApiService,LoginServiceService,AuthGuardService,CommentsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [MessageComponent]
+
 })
 export class AppModule { }

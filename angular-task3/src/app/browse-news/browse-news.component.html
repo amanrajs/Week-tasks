@@ -5,7 +5,7 @@
   </select>
   <div>
     <input type='text' placeholder='...Type your text ' value='' #filter>
-    <button type='submit' (click)='filterArticles(filter.value)' id='btnFilter'> {{btnText}}</button>
+    <button type='submit' [style.color]="btnStyle" (click)='filterArticles(filter.value)' id='btnFilter'> {{btnText}}</button>
   </div>
   <div *ngIf="isAdmin">
     <button (click)='addArticle()' type='button'> Add Article</button>
