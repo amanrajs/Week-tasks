@@ -2,7 +2,7 @@ import { AppConstants } from './constants';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IArticle } from './Articles';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, Observer } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +11,10 @@ export class NewsApiService {
   public article = new Subject<any>();
   public url = AppConstants.dataUrl;
   tempData: any;
-  constructor(private http: HttpClient) { }
+  
+  constructor(private http: HttpClient) {
+    
+   }
   getArticles(): Observable<IArticle[]> {
     return this.http.get<IArticle[]>(this.url);
   }

@@ -6,7 +6,7 @@
         <div [className]="'shortArticleSubRightColumn'">
             <h4>{{heading}}</h4>
             <p>{{content}}</p>
-            <h4 [className]="'date'">{{date}}</h4>
+            <h4 [className]="'date'">{{date|date: 'dd/MM/yyyy'}}</h4>
             <button id=btnClose (click)="btnClose(
             )">Go back</button>
         </div>

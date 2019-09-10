@@ -15,7 +15,6 @@ export class FullArticleComponent implements OnInit {
   }
   ngOnInit() {
     let id = parseInt(this.route.snapshot.paramMap.get('id'));
-    console.log(id);
     this.news.getArticles().subscribe(
       (data) => {
         let item: any;

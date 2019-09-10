@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NewsApiService } from '../news-api.service';
 import { IArticle } from '../Articles';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable, Observer } from 'rxjs';
 @Component({
   selector: 'app-browse-news',
   templateUrl: './browse-news.component.html',
@@ -21,6 +21,16 @@ export class BrowseNewsComponent implements OnInit {
   constructor(private router: Router, private newsapi: NewsApiService) {
   }
   ngOnInit() {
+    const myObservable = Observable.create((observer: Observer<any>) => {
+      setTimeout(() => {
+        observer.next(" custom observable here");
+      }, 2000);
+
+    });
+    myObservable.subscribe(
+      (data: string) => { console.log(data); },
+      () => { console.log("completed"); }
+    );
     this.newsapi.getArticles().subscribe(
       (data) => {
         this.articles = data;
