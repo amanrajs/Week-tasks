@@ -13,14 +13,14 @@ export class ShortArticleComponent implements OnInit {
   @Output() public newsData = new EventEmitter<IArticle>();;
   public newsHeading: string;
   newsContent: string;
-  date: Date;
+  sdate: Date;
   btnId: string;
   constructor(private router: Router, private ref: ChangeDetectorRef) {
   }
   ngOnInit() {
     this.newsHeading = this.news.postTitle;
     this.newsContent = this.news.postDesc;
-    this.date = this.news.postDate;
+    this.sdate = this.news.postDate;
     this.btnId = this.news.postId + 'btn';
   }
   readMore(newNews) {

@@ -1,7 +1,7 @@
 <div [className]="'container'">
     <div [className]="'shortArticle'">
         <div>
-            <img [className]="'image'" src="../../assets/img/download.png" alt="newsimage">
+            <ng-content></ng-content>
         </div>
         <div [className]="'shortArticleSubRightColumn'">
             <h4>{{newsHeading}}</h4>
@@ -10,7 +10,6 @@
             )">Read More</button>
             <p></p>
         </div>
-        <p [className]="'date'">{{date}}</p>
+        <p [className]="'date'">{{sdate |date :'longDate'}}</p>
     </div>
-
 </div>
