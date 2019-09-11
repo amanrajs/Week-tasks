@@ -1,0 +1,12 @@
+<div [className]="'comment'">
+    <div [className]="'heading'">
+        <h3>Comments</h3>
+        <input type="text" placeholder="add your comments" [(ngModel)]="comment" #comment1>
+        <button (click)="Comment(comment1.value)">Add comment</button>
+        <div [className]="'list'" *ngFor="let comment of comments">
+            {{author}} :: {{comment}}
+            <hr>
+        </div>
+    </div>
+
+</div>

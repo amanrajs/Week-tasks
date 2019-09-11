@@ -1,0 +1,9 @@
+<div [className]="'header'">
+    <img src="../../assets/img/favicon.ico" alt="Logo">
+    <div *ngIf="isAdmin">
+        <h3>Hello admin </h3>
+    </div>
+    <div [className]="'headerDiv'">
+        <div *ngIf="isLogin || isAdmin"> <button (click)="Logout()">logout</button></div>
+    </div>
+</div>

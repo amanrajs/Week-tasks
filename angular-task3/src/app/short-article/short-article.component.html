@@ -1,0 +1,16 @@
+<div [className]="'container'">
+    <div [className]="'shortArticle'">
+        <div>
+            <img [className]="'image'" src="../../assets/img/download.png" alt="newsimage">
+        </div>
+        <div [className]="'shortArticleSubRightColumn'">
+            <h4>{{newsHeading}}</h4>
+            <p>{{newsContent| slice:0:500}}...</p>
+            <h6>Comments : {{comments}}</h6>
+            <button id=btnReadMore (click)="readMore(news
+            )">Read More</button>
+            <p></p>
+        </div>
+        <p [className]="'date'">{{date}}</p>
+    </div>
+</div>
