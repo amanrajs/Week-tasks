@@ -1,22 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { NewsApiService } from './news-api.service';
 @Injectable({
   providedIn: 'root'
 })
 export class CommentsService {
-  comments:Map<number,string[]>=new Map<number,string[]>();
+  comments: Map<number, string[]> = new Map<number, string[]>();
   public check = new Subject<any>();
 
-  constructor() {
-    let list=[];
-    for(let i=0 ;i<15;i++){
-      // list.push(i.toString());
-      this.comments.set(i,list);
-      list=[];
+  constructor(private news: NewsApiService) {
+    let list = [];
+    for (let i = 0; i < 15; i++) {
+      this.comments.set(i, list);
+      list = [];
     }
-    //console.log(this.comments.get(10));
-   }
-   broadcastChange(){
-     this.check.next(this.comments);
-   }
+  }
+  updateMap(id) {
+    let list = [];
+    this.comments.set(id, list);
+    this.news.postId++;
+  }
+  broadcastChange() {
+    this.check.next(this.comments);
+  }
 }

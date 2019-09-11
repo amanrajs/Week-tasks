@@ -8,7 +8,7 @@ import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from
 export class AuthGuardService implements CanActivate {
   constructor(private api: LoginServiceService, private router: Router) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (this.api.isValid||this.api.isAdmin) {
+    if (this.api.isValid || this.api.isAdmin) {
       return true;
     } else {
       this.router.navigate([''], {

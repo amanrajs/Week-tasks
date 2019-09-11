@@ -47,7 +47,7 @@ export class BrowseNewsComponent implements OnInit {
         Data.postCategory = article_data.author;
         Data.imageSrc = AppConstants.imgPath
         Data.postDesc = article_data.newsContent;
-        Data.postId = '1000';
+        Data.postId = this.newsapi.postId.toString();
         this.newsapi.tempData = Data;
       }
     );

@@ -21,6 +21,7 @@ export class CommentsComponent implements OnInit, OnChanges {
     }
   }
   ngOnChanges() {
+
     if (this.newsPostId) {
       this.comments = this.comm.comments.get(parseInt(this.newsPostId));
     }

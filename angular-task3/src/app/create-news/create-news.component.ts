@@ -1,8 +1,10 @@
+import { CommentsService } from './../comments.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NewsApiService } from '../news-api.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-create-news',
@@ -11,7 +13,7 @@ import { NewsApiService } from '../news-api.service';
 })
 export class CreateNewsComponent implements OnInit {
   createNewsForm: FormGroup;
-  constructor(private fb: FormBuilder, private router: Router, private news: NewsApiService) { }
+  constructor(private fb: FormBuilder, private router: Router, private news: NewsApiService, private comm: CommentsService) { }
   ngOnInit() {
     this.createNewsForm = this.fb.group({
       newsHeading: ['', [Validators.required, Validators.minLength(3)]],
@@ -24,6 +26,7 @@ export class CreateNewsComponent implements OnInit {
   }
   onSubmit() {
     this.news.updateArticles(this.createNewsForm.value);
+    this.comm.updateMap(this.news.postId);
     this.router.navigateByUrl('home');
   }
   resetForm() {

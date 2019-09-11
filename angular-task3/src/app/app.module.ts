@@ -1,13 +1,13 @@
 import { CommentsService } from './comments.service';
 import { AuthGuardService } from './auth-guard.service';
 import { LoginServiceService } from './login-service.service';
-import { AppRoutingModule ,routingComponents} from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsApiService } from './news-api.service';
 import { AppComponent } from './app.component';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShortArticleComponent } from './short-article/short-article.component';
@@ -36,7 +36,7 @@ import { MessageComponent } from './message/message.component';
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [NewsApiService,LoginServiceService,AuthGuardService,CommentsService],
+  providers: [NewsApiService, LoginServiceService, AuthGuardService, CommentsService],
   bootstrap: [AppComponent],
   entryComponents: [MessageComponent]
 

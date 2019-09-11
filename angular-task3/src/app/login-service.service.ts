@@ -7,7 +7,7 @@ import { Subject } from 'rxjs';
 export class LoginServiceService {
   constructor() { }
   isValid = false;
-  isAdmin:boolean=false;
+  isAdmin: boolean = false;
   public check = new Subject<any>();
   public checkAdmin = new Subject<any>();
   loginCheck(username, password) {
@@ -17,7 +17,7 @@ export class LoginServiceService {
     };
     return this.isValid;
   }
-  adminCheck(username, password){
+  adminCheck(username, password) {
     if (username === AppConstants.adminEmail && password === AppConstants.adminPassword) {
       this.checkAdmin.next(true);
       this.isAdmin = true;

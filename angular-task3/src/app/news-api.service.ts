@@ -8,9 +8,8 @@ import { AppConstants } from './constants';
   providedIn: 'root'
 })
 export class NewsApiService {
-  private _url = "/assets/data/newsArticles.json";
   public url = AppConstants.dataUrl;
-
+  postId = 100;
   public article = new Subject<any>();
   tempData: any;
   constructor(private http: HttpClient) { }

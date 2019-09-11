@@ -31,7 +31,6 @@ export class LoginPageComponent implements OnInit {
     }
   }
   createComponent() {
-    // this.entry.clear();
     const factory = this.resolver.resolveComponentFactory(MessageComponent);
     this.componentRef = this.entry.createComponent(factory);
     this.componentRef.instance.message = "Called by appComponent";

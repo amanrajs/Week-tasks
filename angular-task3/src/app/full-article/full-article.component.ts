@@ -15,6 +15,7 @@ export class FullArticleComponent implements OnInit {
   }
   ngOnInit() {
     let id = parseInt(this.route.snapshot.paramMap.get('id'));
+
     this.news.getArticles().subscribe(
       (data) => {
         let item: any;
@@ -26,6 +27,13 @@ export class FullArticleComponent implements OnInit {
             this.date = item.postDate;
             this.postId = item.postId;
           }
+        }
+        if (!this.postId) {
+          this.postId = this.news.tempData.postId;
+          this.fullnews = this.news.tempData.postDesc;
+          this.heading = this.news.tempData.postTitle;
+          this.content = this.news.tempData.postDesc;
+          this.date = this.news.tempData.postDate;
         }
       }
     );

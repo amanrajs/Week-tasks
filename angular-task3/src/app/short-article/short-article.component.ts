@@ -26,7 +26,6 @@ export class ShortArticleComponent implements OnInit {
     this.newsContent = this.news.postDesc;
     this.date = this.news.postDate;
     this.btnId = this.news.postId + 'btn';
-    console.log(this.comments);
     this.comments = this.comm.comments.get(parseInt(this.news.postId)).length;
   }
   readMore(newNews) {
