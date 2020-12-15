@@ -1,0 +1,31 @@
+.container {
+  margin-bottom: 20px;
+  width: 80%;
+  height: 10%;
+  border: 2px solid #333;
+}
+.shortArticle {
+  display: flex;
+  justify-content: flex-start;
+}
+.date {
+  margin-left: auto;
+}
+#btnReadMore {
+  margin-top: auto;
+  width: 20%;
+}
+.shortArticleSubRightColumn {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: block;
+}
+
+

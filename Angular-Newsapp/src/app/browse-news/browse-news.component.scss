@@ -1,0 +1,19 @@
+.heading {
+  width: 100%;
+  border-width: 0.1px;
+  background-color: gray;
+  color: #fffffd;
+  text-align: center;
+}
+
+.filterOptions {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
